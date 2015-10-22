@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Train Time</title>
+    <script src="/js/angular.js"></script>
+    <script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYkyajcm5TA7XHzvk8AJAmCjti_eAobRU&sensor=true&libraries=places"></script>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Michroma" />
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+
+</head>
+
+<body ng-app="subway">
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div ng-controller="MapController">
+            <li class="line-time-title"><h1> Train Time </h1></li>
+<!--             <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
+            <div class="map" id="map-canvas"></div>
+            <li class="line-time-find"><button ng-click="getNearbyStations()">Find Stations</button></li>
+            <div ng-repeat="item in data | orderBy : 'ttnt'">
+                <li class="line-time">
+                    <div class="col-xs-2"><img ng-src="http://www.mta.info/sites/default/files/mtaimgs/{{item.line.toLowerCase()}}_36px.png">
+                    </div>
+                    <div class="col-xs-3">{{item.station}}</div>
+                    <div class="col-xs-2 glyphicon glyphicon-time"></div>
+                    <div class="col-xs-3">{{item.ttnt + " minutes"}}</div>
+                    <div class="col-xs-2" ng-class="{'glyphicon glyphicon-circle-arrow-up': item.direct, 'glyphicon glyphicon-circle-arrow-down': !item.direct}"></div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+        <script src="/js/app.js"></script>
+        <script src="/js/controllers/map.controller.js"></script>
+        <script src="/js/factories/map.factory.js"></script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
