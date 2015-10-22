@@ -8,10 +8,9 @@
     "mongoose": "^4.0.1",
     "nodemon": "^1.3.7"
   },
-  // "private": true,
   "scripts": {
     "start": "nodemon -e html,js,css ./start.js",
-    "postinstall": "bower install && /google_transit/seed_s_c_t_.js && /google_transit/seedstops2.js && /google_transit/seedstops3.js && /google_transit/seedstops4.js && /google_transit/seedstops5.js && /google_transit/seedstops6.js"
+    "postinstall": "bower install; node seed_s_c_t; node seedstops1A; node seedstops2; node seedstops2A; node seedstops3; node seedstops3A; node seedstops4; node seedstops4A; node seedstops5; node seedstops5A; node seedstops6"
   },
   "devDependencies": {
     "nodemon": "^1.3.7"

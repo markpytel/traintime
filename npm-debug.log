@@ -1,0 +1,74 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose readDependencies loading dependencies from /Users/markpytel/Javascript/traintest/traintime/package.json
+5 warn package.json subway@1.0.0 No repository field.
+6 warn package.json subway@1.0.0 No license field.
+7 warn package.json Dependency 'nodemon' exists in both dependencies and devDependencies, using 'nodemon@^1.3.7' from dependencies
+8 verbose install where, deps [ '/Users/markpytel/Javascript/traintest/traintime',
+8 verbose install   [ 'bluebird', 'body-parser', 'express', 'mongoose', 'nodemon' ] ]
+9 verbose install where, peers [ '/Users/markpytel/Javascript/traintest/traintime', [] ]
+10 verbose installManyTop reading for lifecycle /Users/markpytel/Javascript/traintest/traintime/package.json
+11 info preinstall subway@1.0.0
+12 verbose installManyTop reading scoped package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/bluebird/package.json
+13 verbose installManyTop reading scoped package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/body-parser/package.json
+14 verbose installManyTop reading scoped package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/express/package.json
+15 verbose installManyTop reading scoped package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/mongoose/package.json
+16 verbose installManyTop reading scoped package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/nodemon/package.json
+17 verbose readDependencies loading dependencies from /Users/markpytel/Javascript/traintest/traintime/package.json
+18 verbose targetResolver reading package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/bluebird/package.json
+19 verbose targetResolver reading package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/body-parser/package.json
+20 verbose targetResolver reading package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/express/package.json
+21 verbose targetResolver reading package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/mongoose/package.json
+22 verbose targetResolver reading package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/nodemon/package.json
+23 verbose targetResolver reading package data from /Users/markpytel/Javascript/traintest/traintime/node_modules/.bin/nodemon/package.json
+24 verbose already installed skipping mongoose@^4.0.1 /Users/markpytel/Javascript/traintest/traintime
+25 verbose already installed skipping nodemon@^1.3.7 /Users/markpytel/Javascript/traintest/traintime
+26 verbose already installed skipping bluebird@^2.9.21 /Users/markpytel/Javascript/traintest/traintime
+27 verbose already installed skipping body-parser@^1.13.3 /Users/markpytel/Javascript/traintest/traintime
+28 verbose already installed skipping express@^4.11.2 /Users/markpytel/Javascript/traintest/traintime
+29 silly install resolved []
+30 info build /Users/markpytel/Javascript/traintest/traintime
+31 info linkStuff subway@1.0.0
+32 silly linkStuff subway@1.0.0 has /Users/markpytel/Javascript/traintest as its parent node_modules
+33 verbose linkBins subway@1.0.0
+34 verbose linkMans subway@1.0.0
+35 verbose rebuildBundles subway@1.0.0
+36 verbose rebuildBundles [ '.bin',
+36 verbose rebuildBundles   'bluebird',
+36 verbose rebuildBundles   'body-parser',
+36 verbose rebuildBundles   'express',
+36 verbose rebuildBundles   'mongoose',
+36 verbose rebuildBundles   'nodemon' ]
+37 info install subway@1.0.0
+38 info postinstall subway@1.0.0
+39 verbose unsafe-perm in lifecycle true
+40 info subway@1.0.0 Failed to exec postinstall script
+41 verbose stack Error: subway@1.0.0 postinstall: `bower install; /google_transit/node seed_s_c_t.js`
+41 verbose stack spawn ENOENT
+41 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:17:16)
+41 verbose stack     at ChildProcess.emit (events.js:110:17)
+41 verbose stack     at maybeClose (child_process.js:1015:16)
+41 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+42 verbose pkgid subway@1.0.0
+43 verbose cwd /Users/markpytel/Javascript/traintest/traintime
+44 error Darwin 14.3.0
+45 error argv "node" "/usr/local/bin/npm" "install"
+46 error node v0.12.4
+47 error npm  v2.10.1
+48 error file sh
+49 error code ELIFECYCLE
+50 error errno ENOENT
+51 error syscall spawn
+52 error subway@1.0.0 postinstall: `bower install; /google_transit/node seed_s_c_t.js`
+52 error spawn ENOENT
+53 error Failed at the subway@1.0.0 postinstall script 'bower install; /google_transit/node seed_s_c_t.js'.
+53 error This is most likely a problem with the subway package,
+53 error not with npm itself.
+53 error Tell the author that this fails on your system:
+53 error     bower install; /google_transit/node seed_s_c_t.js
+53 error You can get their info via:
+53 error     npm owner ls subway
+53 error There is likely additional logging output above.
+54 verbose exit [ 1, true ]
