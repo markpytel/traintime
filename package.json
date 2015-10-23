@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "nodemon -e html,js,css ./start.js",
-    "postinstall": "./node_modules/bower/bin/bower install; node seed_s_c_t; node seedstops1A; node seedstops2; node seedstops2A; node seedstops3; node seedstops3A; node seedstops4; node seedstops4A; node seedstops5; node seedstops5A; node seedstops6"
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "devDependencies": {
     "nodemon": "^1.3.7"

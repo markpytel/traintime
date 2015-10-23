@@ -14,3 +14,6 @@ mongoose.connection.once('open', function () {
 	    console.log('Server started on port ' + PORT.toString());
 	});
 });
+
+
+// ; node seed_s_c_t; node seedstops1A; node seedstops2; node seedstops2A; node seedstops3; node seedstops3A; node seedstops4; node seedstops4A; node seedstops5; node seedstops5A; node seedstops6
