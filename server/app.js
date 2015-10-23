@@ -86,7 +86,7 @@ app.post('/times/', function (req, res) {
                         stopArr.push(transfer.xfer_id + "N");
                         stopArr.push(transfer.xfer_id + "S");
                     });
-                    // console.log(stopArr);
+                    console.log(stopArr);
                 }
             })
         }
@@ -108,6 +108,7 @@ app.post('/times/', function (req, res) {
 
                 res.status(200).json(total);  
             })
+            .then(null, next);
         })
     }
 

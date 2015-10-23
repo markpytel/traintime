@@ -39,8 +39,9 @@ app.factory('MapFactory', function($http) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
                 var place = results[i];
-
-                stations.push(place.geometry.location.H);
+                //console.log("Stations: ", place);
+                //window.place = place;
+                stations.push(place.geometry.location.lat());
             }
         }
     }

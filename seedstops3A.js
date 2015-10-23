@@ -104,7 +104,7 @@ var seedTimes = function () {
             console.error(err);
         }
         console.log('Stop Times PT3A seeded!');
-        process.kill(0);
+        process.exit(0);
     })
 }
 

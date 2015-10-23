@@ -5,7 +5,7 @@ app.controller('MapController', function($scope, MapFactory) {
 
 	$scope.getNearbyStations = function (){
 		MapFactory.get_nearbyStations().then(function(data){
-			//console.log(data);
+			console.log(data);
 			$scope.data = data;
 		});
 	}
