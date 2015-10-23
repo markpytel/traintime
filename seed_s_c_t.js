@@ -88,7 +88,9 @@ var StopsModel = require('./server/models/stops-model');
 var StopTimesModel = require('./server/models/stop_times-model');
 var TransfersModel = require('./server/models/transfers-model');
 
-mongoose.connect('mongodb://localhost/subway');
+// mongoose.connect('mongodb://localhost/subway');
+mongoose.connect('mongodb://heroku_kwxd5sdv:1eijvuls0gtofbvpmhos72r2br@ds043714.mongolab.com:43714/heroku_kwxd5sdv');
+
 
 var wipeDB = function () {
 
