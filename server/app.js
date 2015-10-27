@@ -117,6 +117,7 @@ app.post('/times/', function (req, res) {
     function findStation(index) {
         StopsModel.findOne({stop_lat: stations[index]}).exec()
         .then(function(stop){
+            console.log("Stop found: ", stop);
             if (stop) getTimes(stop);
             else {
                 index++;
