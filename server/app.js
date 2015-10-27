@@ -42,7 +42,7 @@ app.use(function (req, res, next) {
 });
 
 app.post('/times/', function (req, res) {
-    // console.log("getting into route")
+    console.log("getting into route")
 
     var stations = req.body.stations;
     var index = 0;
