@@ -47,6 +47,8 @@ app.post('/times/', function (req, res) {
     var stations = req.body.stations;
     var index = 0;
 
+    console.log("Stations: ", stations)
+
     function getTimes(stop) {
         var date = new Date();
         var day = 0;
