@@ -95,10 +95,12 @@ app.post('/times/', function (req, res) {
                     });
                     console.log(stopArr);
                 }
-            })
+            }).then(null, console.log);
         }
 
         getXfer().then(function(){
+
+            console.log("Getting into train time finding part")
             
             StopTimesModel.find({stop_id: {$in: stopArr}, stop_day: day, stop_time:{$gt: time, $lt: time+20}})
             .exec().then(function (trainTimes) {
