@@ -57,7 +57,7 @@ app.post('/times/', function (req, res) {
         var result = [];
         var lineItem = {};
         var total = {};
-        var stopArr = [stop.stop_id+"S", stop.stop_id+"N"];
+        var stopArr = [stop.stop_id.slice(0,3)+"S", stop.stop_id.slice(0,3)+"N"];
 
         console.log("StopArr in getTimes ", stopArr)
 
