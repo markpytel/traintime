@@ -42,15 +42,15 @@ app.use(function (req, res, next) {
 });
 
 app.post('/times/', function (req, res) {
-    console.log("getting into route")
+    // console.log("getting into route")
 
     var stations = req.body.stations;
     var index = 0;
 
-    console.log("Stations: ", stations)
+    // console.log("Stations: ", stations)
 
     function getTimes(stop) {
-        console.log("Stop in getTimes: ", stop)
+        // console.log("Stop in getTimes: ", stop)
         var date = new Date();
         var day = 0;
         var time = 0;
@@ -59,7 +59,7 @@ app.post('/times/', function (req, res) {
         var total = {};
         var stopArr = [stop.stop_id.slice(0,3)+"S", stop.stop_id.slice(0,3)+"N"];
 
-        console.log("StopArr in getTimes ", stopArr)
+        // console.log("StopArr in getTimes ", stopArr)
 
         if (date.getUTCDay() === 0) day = 0;
         else if (date.getUTCDay() === 6) day = 6;
@@ -93,19 +93,20 @@ app.post('/times/', function (req, res) {
                         stopArr.push(transfer.xfer_id + "N");
                         stopArr.push(transfer.xfer_id + "S");
                     });
-                    console.log(stopArr);
+                    // console.log(stopArr);
                 }
             }).then(null, console.log);
         }
 
         getXfer().then(function(){
 
-            console.log("Getting into train time finding part")
+            // console.log("Getting into train time finding part")
+            // console.log(day, time)
             
             StopTimesModel.find({stop_id: {$in: stopArr}, stop_day: day, stop_time:{$gt: time, $lt: time+20}})
             .exec().then(function (trainTimes) {
 
-                console.log("Traintimes in stoptimesmodel: ", trainTimes)
+                // console.log("Traintimes in stoptimesmodel: ", trainTimes)
 
                 trainTimes.forEach(function(arrTime){
                     if (arrTime.stop_id.slice(0,1) === '9') arrTime.stop_line = 'S'
