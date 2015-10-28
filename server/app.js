@@ -50,6 +50,7 @@ app.post('/times/', function (req, res) {
     console.log("Stations: ", stations)
 
     function getTimes(stop) {
+        console.log("Stop in getTimes: ", stop)
         var date = new Date();
         var day = 0;
         var time = 0;
@@ -57,6 +58,8 @@ app.post('/times/', function (req, res) {
         var lineItem = {};
         var total = {};
         var stopArr = [stop.stop_id+"S", stop.stop_id+"N"];
+
+        console.log("StopArr in getTimes ", stopArr)
 
         if (date.getUTCDay() === 0) day = 0;
         else if (date.getUTCDay() === 6) day = 6;
@@ -81,6 +84,8 @@ app.post('/times/', function (req, res) {
             return TransfersModel.find({stop_id: stop.stop_id, xfer_id: {$ne: stop.stop_id}})
             .exec()
             .then(function (xfer){
+
+                console.log("xfer in getXfer: ", xfer)
   
                 if (xfer.length) {
            
@@ -97,6 +102,8 @@ app.post('/times/', function (req, res) {
             
             StopTimesModel.find({stop_id: {$in: stopArr}, stop_day: day, stop_time:{$gt: time, $lt: time+20}})
             .exec().then(function (trainTimes) {
+
+                console.log("Traintimes in stoptimesmodel: ", trainTimes)
 
                 trainTimes.forEach(function(arrTime){
                     if (arrTime.stop_id.slice(0,1) === '9') arrTime.stop_line = 'S'
